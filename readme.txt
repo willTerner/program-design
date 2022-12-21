@@ -7,7 +7,7 @@
 
 
 编译
-javac -cp lib/* -d bin src/*
+javac -cp "lib/*" -d bin -encoding utf-8 src/*
 插桩
 java -cp "bin;lib/*" MainDriver Precision FastMath FastMathCalc
 运行

@@ -17,9 +17,12 @@ public class GotoInstrumenter extends BodyTransformer {
 //  TO DO: 注册 Counter 以及 recordGoto
 //  
         counterClass = Scene.v().loadClassAndSupport("Counter");
-        recordGoto = counterClass.getMethod(" void recordGoto(String)");
+        recordGoto = counterClass.getMethodByName("recordGoto");
         Scene.v().setSootClassPath(null);
-    }
+
+
+
+		    }
 
     @Override
     protected synchronized void internalTransform(Body body, String s, Map<String, String> map) {
